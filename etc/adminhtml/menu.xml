@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sg::Grid" title="Shippers grid" module="Sg_Grid" sortOrder="0" parent="Sg::Shipper" action="grid/shipper" resource="Serg_Grid::post"/>
+       
+    </menu>
+</config>
+
