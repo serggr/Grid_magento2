@@ -7,7 +7,7 @@
             <block class="Sg\Grid\Block\Adminhtml\Shipper" name="shipper_post_grid">
                 <block class="Magento\Backend\Block\Widget\Grid" name="shipper_post_grid.grid" as="grid">
                     <arguments>
-                        <argument name="id" xsi:type="string">post_id</argument>
+                        <argument name="id" xsi:type="string">id</argument>
                         <argument name="dataSource" xsi:type="object">Sg\Shipper\Model\ResourceModel\Shipper\Collection</argument>
                         <argument name="default_sort" xsi:type="string">id</argument>
                         <argument name="default_dir" xsi:type="string">ASC</argument>
@@ -16,7 +16,10 @@
                     <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" name="shipper_post_grid.grid.columnSet" as="grid.columnSet">
                         <arguments>
                             <argument name="rowUrl" xsi:type="array">
-                                <item name="path" xsi:type="string">*/*/editor</item>
+                                <item name="path" xsi:type="string">*/*/edit</item>
+                                <item name="extraParamsTemplate" xsi:type="array">
+                                   <item name="ship_id" xsi:type="string">getId</item>
+                                </item> 
                             </argument>
                         </arguments>
                         <block class="Magento\Backend\Block\Widget\Grid\Column" as="id">
